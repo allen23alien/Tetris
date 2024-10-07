@@ -1,0 +1,78 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+}
+
+/* Additional CSS for the logo */
+#logo {
+    width: 90px; /* Adjust the width as needed */
+    height: 90px; /* Maintain aspect ratio */
+}
+
+
+#videoBG {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover; /* Ensure video covers the entire viewport */
+    z-index: -1000;
+    max-width: 100%; /* Ensure video does not exceed viewport width */
+    max-height: 100%; /* Ensure video does not exceed viewport height */
+}
+
+/* Additional CSS for the audio logo image */
+#audioLogo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+
+
+.container {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 20);
+    width: 300px;
+    text-align: center; /* Center text horizontally */
+}
+
+.container h2 {
+    margin-bottom: 20px;
+}
+
+.container input[type="text"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.container input[type="submit"] {
+    width: 60%;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.container input[type="submit"]:hover {
+    background-color: #0fb606;
+}

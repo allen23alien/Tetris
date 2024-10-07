@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TETRIS</title>
+<link rel="icon" href="tetris.png" type="image/png">
+<link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+    <video id="videoBG" autoplay muted loop>
+        <source src="tetrisbg.mp4" type="video/mp4">
+    </video>
+    <audio id="bgAudio" loop>
+        <source src="Tetris.mp3" type="audio/mp3">
+    </audio>
+   
+    <div class="container">
+        <img id="audioLogo" src="mute.png" alt="Audio Logo" onclick="toggleAudio()" title="Click to toggle audio">
+        <img id="logo" src="tetris.png" alt="Logo">
+        <form action="player name.php" method="post">
+            <input type="text" name="name" placeholder="Player Name" required>
+            <input type="submit" value="Let's Start" >
+        </form>
+    </div>
+
+    <script>
+        const bgAudio = document.getElementById('bgAudio');
+        const audioLogo = document.getElementById('audioLogo');
+
+        function toggleAudio() {
+            if (bgAudio.paused) {
+                bgAudio.play();
+                audioLogo.src = "high-volume.png"; // Unmuted audio logo
+            } else {
+                bgAudio.pause();
+                audioLogo.src = "mute.png"; // Muted audio logo
+            }
+        }
+    </script>
+</body>
+</html>
